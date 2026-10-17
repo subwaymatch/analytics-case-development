@@ -1,0 +1,76 @@
+# Jupyter Book 2 configuration: https://jupyterbook.org
+# Build locally with `jupyter book start` (live preview) or `jupyter book build --html`.
+# Notebooks are rendered with their saved outputs; nothing is re-executed.
+version: 1
+project:
+  title: Analytics Case Development
+  description: Data analytics case studies in Python, pandas, and Plotly.
+  github: https://github.com/subwaymatch/analytics-case-development
+  exclude:
+    - "**/.ipynb_checkpoints/**"
+  toc:
+    - file: index.md
+    - title: Benford's Law
+      children:
+        - file: benfords-test/benfords-analysis.ipynb
+          title: First-, second-, and first-two-digit tests
+        - file: benfords-test/second_digit.ipynb
+          title: First- and second-digit tests
+    - title: Campus Leasing Company Reviews
+      children:
+        - file: campus-leasing-company-reviews/01-convert-to-csv.ipynb
+          title: 1. Convert Excel files to CSV
+        - file: campus-leasing-company-reviews/02-clean-data.ipynb
+          title: 2. Clean data
+        - file: campus-leasing-company-reviews/02-clean-data-sample-only.ipynb
+          title: 2. Clean data (sample only)
+        - file: campus-leasing-company-reviews/03-EDA.ipynb
+          title: 3. Exploratory data analysis
+        - file: campus-leasing-company-reviews/04-text-analytics.ipynb
+          title: 4. Sentiment analysis
+        - file: campus-leasing-company-reviews/05-analysis-blog.ipynb
+          title: 5. Analysis write-up
+        - file: campus-leasing-company-reviews/05-sample-study.ipynb
+          title: 5. Sample study
+        - file: campus-leasing-company-reviews/demo-01-nlp-intro.ipynb
+          title: "Demo: NLP introduction"
+        - file: campus-leasing-company-reviews/demo-02-google-reviews-EDA.ipynb
+          title: "Demo: Google reviews EDA"
+    - file: cu-leasing-companies/cu-leasing-companies.ipynb
+      title: Champaign-Urbana Landlords
+    - file: cpu-gpu-chips/cpu-gpu-chips.ipynb
+      title: CPUs vs. GPUs
+    - title: SEC EDGAR API
+      children:
+        - file: edgar-api/edgar-api.ipynb
+          title: Big Tech financials from XBRL
+        - file: edgar-api/edgartools-test.ipynb
+          title: edgartools test
+    - file: flying-etiquette-survey-analysis/survey-analysis.ipynb
+      title: Flying Etiquette Survey
+    - file: gpus/gpu-specs-analysis.ipynb
+      title: Four Decades of GPUs
+    - title: Hotel Booking Demand
+      children:
+        - file: hotel-booking/process-dataset.ipynb
+          title: Process the dataset
+        - file: hotel-booking/questions.ipynb
+          title: Who cancels, and what it costs
+    - file: iphone-galaxy-specs/iphone-galaxy-base-models.ipynb
+      title: iPhone vs. Galaxy S
+    - file: maven-toy-sales-relational-db/create-database-file.ipynb
+      title: Maven Toys SQLite Database
+    - file: parental-leave-policies/parental-leave-policies.ipynb
+      title: Parental Leave Policies
+    - file: sfo-airport-traffic/airport-traffic.ipynb
+      title: SFO Passenger Traffic
+    - file: short-seller-reports/short-seller-reports.ipynb
+      title: Short-Seller Reports
+    - file: telecom-customer-churn/telecom-customer-churn.ipynb
+      title: Telecom Customer Churn
+    - file: us-births/us-births.ipynb
+      title: US Births, 1994–2014
+site:
+  template: book-theme
+  options:
+    folders: true
