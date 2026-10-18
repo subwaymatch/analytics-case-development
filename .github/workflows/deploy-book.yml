@@ -29,6 +29,26 @@ jobs:
           node-version: 24.x
       - name: Install Jupyter Book
         run: npm install -g jupyter-book@2.1.7
+      # Plotly figures saved with a static PNG fallback render as that PNG on the site.
+      # Drop the PNG (in this build checkout only) so the theme renders the interactive chart.
+      - name: Prefer interactive Plotly charts
+        run: |
+          python3 - <<'EOF'
+          import json
+          import pathlib
+
+          for path in pathlib.Path(".").glob("**/*.ipynb"):
+              nb = json.loads(path.read_text(encoding="utf-8"))
+              changed = False
+              for cell in nb["cells"]:
+                  for output in cell.get("outputs", []):
+                      data = output.get("data", {})
+                      if "application/vnd.plotly.v1+json" in data and "image/png" in data:
+                          del data["image/png"]
+                          changed = True
+              if changed:
+                  path.write_text(json.dumps(nb, indent=1, ensure_ascii=False), encoding="utf-8")
+          EOF
       - name: Build HTML
         run: jupyter-book build --html
       - name: Upload Pages artifact
