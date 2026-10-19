@@ -133,3 +133,6 @@ maven-toy-sales-relational-db/maven_toys.sqlite
 
 # Jupyter Book build output
 _build/
+
+# Downloaded on first run by odometer-fabrication.ipynb (no license on OSF, so not redistributed)
+odometer-fabrication/DrivingdataAll.xls
