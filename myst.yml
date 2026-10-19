@@ -10,12 +10,16 @@ project:
     - "**/.ipynb_checkpoints/**"
   toc:
     - file: index.md
-    - title: Benford's Law
+    - title: Benford's Law & Digit Tests
       children:
         - file: benfords-test/benfords-analysis.ipynb
           title: First-, second-, and first-two-digit tests
         - file: benfords-test/second_digit.ipynb
           title: First- and second-digit tests
+        - file: nigeria-sweden-elections/election-last-digits.ipynb
+          title: "Election fraud: Nigeria vs. Sweden"
+        - file: odometer-fabrication/odometer-fabrication.ipynb
+          title: Fabricated odometer readings
     - title: Campus Leasing Company Reviews
       children:
         - file: campus-leasing-company-reviews/01-convert-to-csv.ipynb

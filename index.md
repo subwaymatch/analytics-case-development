@@ -5,6 +5,8 @@ Data analytics case studies written as Jupyter notebooks, using Python, pandas, 
 | Case | Notebook |
 | --- | --- |
 | Benford's Law on P-Card transactions | [](benfords-test/benfords-analysis.ipynb) |
+| Election fraud digit tests: Nigeria 2003 vs. Sweden 2002 | [](nigeria-sweden-elections/election-last-digits.ipynb) |
+| Fabricated odometer readings in a retracted honesty study | [](odometer-fabrication/odometer-fabrication.ipynb) |
 | Campus leasing company reviews (UIUC, BYU, PSU) | [](campus-leasing-company-reviews/05-analysis-blog.ipynb) |
 | Champaign-Urbana landlords | [](cu-leasing-companies/cu-leasing-companies.ipynb) |
 | CPUs vs. GPUs | [](cpu-gpu-chips/cpu-gpu-chips.ipynb) |
